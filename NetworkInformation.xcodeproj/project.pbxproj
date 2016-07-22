@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		DAEE22771D40746600D8AF63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE22761D40746600D8AF63 /* AppDelegate.swift */; };
-		DAEE22791D40746600D8AF63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE22781D40746600D8AF63 /* ViewController.swift */; };
+		DAEE22791D40746600D8AF63 /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE22781D40746600D8AF63 /* DisclaimerViewController.swift */; };
 		DAEE227C1D40746600D8AF63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAEE227A1D40746600D8AF63 /* Main.storyboard */; };
 		DAEE227E1D40746600D8AF63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAEE227D1D40746600D8AF63 /* Assets.xcassets */; };
 		DAEE22811D40746600D8AF63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAEE227F1D40746600D8AF63 /* LaunchScreen.storyboard */; };
 		DAEE228C1D40746600D8AF63 /* NetworkInformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE228B1D40746600D8AF63 /* NetworkInformationTests.swift */; };
+		DAEE22971D41030D00D8AF63 /* NetworkInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE22961D41030D00D8AF63 /* NetworkInfoViewController.swift */; };
+		DAEE22991D41297300D8AF63 /* NetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE22981D41297300D8AF63 /* NetInfo.swift */; };
+		DAEE229A1D41297300D8AF63 /* NetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE22981D41297300D8AF63 /* NetInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,7 @@
 /* Begin PBXFileReference section */
 		DAEE22731D40746600D8AF63 /* NetworkInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEE22761D40746600D8AF63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAEE22781D40746600D8AF63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAEE22781D40746600D8AF63 /* DisclaimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerViewController.swift; sourceTree = "<group>"; };
 		DAEE227B1D40746600D8AF63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAEE227D1D40746600D8AF63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAEE22801D40746600D8AF63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,8 @@
 		DAEE22871D40746600D8AF63 /* NetworkInformationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkInformationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEE228B1D40746600D8AF63 /* NetworkInformationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInformationTests.swift; sourceTree = "<group>"; };
 		DAEE228D1D40746600D8AF63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAEE22961D41030D00D8AF63 /* NetworkInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkInfoViewController.swift; sourceTree = "<group>"; };
+		DAEE22981D41297300D8AF63 /* NetInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +83,10 @@
 			isa = PBXGroup;
 			children = (
 				DAEE22761D40746600D8AF63 /* AppDelegate.swift */,
-				DAEE22781D40746600D8AF63 /* ViewController.swift */,
+				DAEE22781D40746600D8AF63 /* DisclaimerViewController.swift */,
 				DAEE227A1D40746600D8AF63 /* Main.storyboard */,
+				DAEE22961D41030D00D8AF63 /* NetworkInfoViewController.swift */,
+				DAEE22981D41297300D8AF63 /* NetInfo.swift */,
 				DAEE227D1D40746600D8AF63 /* Assets.xcassets */,
 				DAEE227F1D40746600D8AF63 /* LaunchScreen.storyboard */,
 				DAEE22821D40746600D8AF63 /* Info.plist */,
@@ -146,6 +153,7 @@
 				TargetAttributes = {
 					DAEE22721D40746600D8AF63 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 9FX52HVPTF;
 					};
 					DAEE22861D40746600D8AF63 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -197,8 +205,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAEE22791D40746600D8AF63 /* ViewController.swift in Sources */,
+				DAEE22971D41030D00D8AF63 /* NetworkInfoViewController.swift in Sources */,
+				DAEE22791D40746600D8AF63 /* DisclaimerViewController.swift in Sources */,
 				DAEE22771D40746600D8AF63 /* AppDelegate.swift in Sources */,
+				DAEE22991D41297300D8AF63 /* NetInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAEE228C1D40746600D8AF63 /* NetworkInformationTests.swift in Sources */,
+				DAEE229A1D41297300D8AF63 /* NetInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,10 +340,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NetworkInformation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nist.csd.NetworkInformation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -340,10 +354,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NetworkInformation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nist.csd.NetworkInformation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

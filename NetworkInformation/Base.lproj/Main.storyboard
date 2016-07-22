@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1nE-Ux-aNo">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NetworkInformation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,143 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="T1E-2U-vY9">
+                                <rect key="frame" x="20" y="199" width="560" height="203"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Disclaimer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7i-gK-hdM">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jR2-6p-eaw">
+                                        <rect key="frame" x="0.0" y="21" width="560" height="102"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Use of this application on this device does not imply any recommendation or endorsement by the National Institute of Standards and Technology, nor does it imply that this application or device is necessarily the best available for the purpose.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="This is a beta release, with all warnings implied." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="avD-X5-6Bp">
+                                        <rect key="frame" x="0.0" y="123" width="560" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD4-Ic-R9v">
+                                        <rect key="frame" x="0.0" y="173" width="560" height="30"/>
+                                        <state key="normal" title="Accept"/>
+                                        <connections>
+                                            <segue destination="ewS-fL-ij6" kind="presentation" id="1vj-cc-dfZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T1E-2U-vY9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4Za-cp-WfJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T1E-2U-vY9" secondAttribute="trailing" id="Tdi-ks-rMI"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Q9n-UA-HH1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1117" y="350"/>
+        </scene>
+        <!--Network Info View Controller-->
+        <scene sceneID="HM9-0X-48G">
+            <objects>
+                <viewController id="ewS-fL-ij6" customClass="NetworkInfoViewController" customModule="NetworkInformation" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dNw-eX-vzO"/>
+                        <viewControllerLayoutGuide type="bottom" id="DFm-6m-110"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gtY-gj-9Xd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KyA-le-uXr">
+                                <rect key="frame" x="20" y="28" width="560" height="560"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7X-Bu-rmo">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" misplaced="YES" text="Network Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zab-xO-Fdg">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="50" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38A-11-PMx">
+                                                <rect key="frame" x="170" y="0.0" width="391" height="30"/>
+                                                <state key="normal" title="Refresh"/>
+                                                <connections>
+                                                    <action selector="refreshNetInfo:" destination="ewS-fL-ij6" eventType="touchUpInside" id="NXh-KY-fQv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MX9-W7-VcL">
+                                        <rect key="frame" x="0.0" y="30" width="560" height="530"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Uc-e2-aOY">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="421"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="5Uc-e2-aOY" secondAttribute="bottom" id="DpY-5e-nkP"/>
+                                            <constraint firstItem="5Uc-e2-aOY" firstAttribute="leading" secondItem="MX9-W7-VcL" secondAttribute="leading" id="GjJ-hV-v1g"/>
+                                            <constraint firstAttribute="trailing" secondItem="5Uc-e2-aOY" secondAttribute="trailing" id="YUc-Zs-0ns"/>
+                                            <constraint firstAttribute="trailing" secondItem="5Uc-e2-aOY" secondAttribute="trailing" id="bbt-H8-Nkx"/>
+                                            <constraint firstItem="5Uc-e2-aOY" firstAttribute="top" secondItem="MX9-W7-VcL" secondAttribute="top" id="ri3-P3-q9g"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="U7X-Bu-rmo" secondAttribute="trailing" id="OcF-yM-bxl"/>
+                                    <constraint firstItem="U7X-Bu-rmo" firstAttribute="leading" secondItem="KyA-le-uXr" secondAttribute="leading" id="vpO-rD-R16"/>
+                                    <constraint firstItem="U7X-Bu-rmo" firstAttribute="top" secondItem="KyA-le-uXr" secondAttribute="top" id="yzF-Jf-PJS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KyA-le-uXr" firstAttribute="leading" secondItem="gtY-gj-9Xd" secondAttribute="leadingMargin" id="CQx-CI-OL2"/>
+                            <constraint firstItem="DFm-6m-110" firstAttribute="top" secondItem="KyA-le-uXr" secondAttribute="bottom" id="Uyv-Up-qRk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KyA-le-uXr" secondAttribute="trailing" id="d9S-Ar-nyT"/>
+                            <constraint firstItem="KyA-le-uXr" firstAttribute="top" secondItem="dNw-eX-vzO" secondAttribute="bottom" constant="20" id="yI6-rv-Ksv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="netInfoTextView" destination="5Uc-e2-aOY" id="X8Q-Bj-Rcv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IVm-ed-LbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837" y="350"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="neg-wq-1kG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1nE-Ux-aNo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8j6-WA-0HG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sRH-dG-l40"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FP-g6-vj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="350"/>
         </scene>
     </scenes>
 </document>

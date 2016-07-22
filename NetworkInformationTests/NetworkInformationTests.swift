@@ -6,6 +6,7 @@
 //  Copyright © 2016 NIST. All rights reserved.
 //
 
+import UIKit
 import XCTest
 @testable import NetworkInformation
 
@@ -33,4 +34,15 @@ class NetworkInformationTests: XCTestCase {
         }
     }
     
+    // MARK: NetworkInformation Tests
+    // Tests to confirm that the NetInfo initializer returns when no name is provided.
+    func testNetInfoInitialization() {
+        // Success test.
+        let potentialNetInfo = NetInfo(name: "Test Network Info")
+        XCTAssertNotNil(potentialNetInfo)
+        
+        // Failure case.
+        let noName = NetInfo(name: "")
+        XCTAssertNil(noName, "Empty name is invalid")
+    }
 }

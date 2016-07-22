@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DisclaimerViewController.swift
 //  NetworkInformation
 //
 //  Created by Paul on 7/20/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DisclaimerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
