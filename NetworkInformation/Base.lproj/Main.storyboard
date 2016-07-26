@@ -99,7 +99,7 @@
                                         <rect key="frame" x="0.0" y="30" width="560" height="530"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Uc-e2-aOY">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="421"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="530"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -109,13 +109,13 @@
                                             <constraint firstAttribute="bottom" secondItem="5Uc-e2-aOY" secondAttribute="bottom" id="DpY-5e-nkP"/>
                                             <constraint firstItem="5Uc-e2-aOY" firstAttribute="leading" secondItem="MX9-W7-VcL" secondAttribute="leading" id="GjJ-hV-v1g"/>
                                             <constraint firstAttribute="trailing" secondItem="5Uc-e2-aOY" secondAttribute="trailing" id="YUc-Zs-0ns"/>
-                                            <constraint firstAttribute="trailing" secondItem="5Uc-e2-aOY" secondAttribute="trailing" id="bbt-H8-Nkx"/>
                                             <constraint firstItem="5Uc-e2-aOY" firstAttribute="top" secondItem="MX9-W7-VcL" secondAttribute="top" id="ri3-P3-q9g"/>
                                         </constraints>
                                     </scrollView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="U7X-Bu-rmo" secondAttribute="trailing" id="OcF-yM-bxl"/>
+                                    <constraint firstItem="MX9-W7-VcL" firstAttribute="top" secondItem="U7X-Bu-rmo" secondAttribute="bottom" id="qqR-BS-2fd"/>
                                     <constraint firstItem="U7X-Bu-rmo" firstAttribute="leading" secondItem="KyA-le-uXr" secondAttribute="leading" id="vpO-rD-R16"/>
                                     <constraint firstItem="U7X-Bu-rmo" firstAttribute="top" secondItem="KyA-le-uXr" secondAttribute="top" id="yzF-Jf-PJS"/>
                                 </constraints>
