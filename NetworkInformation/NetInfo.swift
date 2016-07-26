@@ -22,12 +22,12 @@ class NetInfo {
     var networkSubscriber:CTSubscriber
     var networkSubscriberInfo:CTSubscriberInfo
     var networkInfo:CTTelephonyNetworkInfo
-    var hasInternet:String
+    var hasInternet:Bool
     var hasConnection:Bool
     var carrierProxy:Bool
     
     // MARK: Initialization
-    init?(name: String, networkCarrier: CTCarrier, networkCellData: CTCellularData, networkSubscriber: CTSubscriber, networkSubscriberInfo: CTSubscriberInfo, networkInfo: CTTelephonyNetworkInfo, hasInternet: String, hasConnection: Bool, carrierProxy: Bool) {
+    init?(name: String, networkCarrier: CTCarrier, networkCellData: CTCellularData, networkSubscriber: CTSubscriber, networkSubscriberInfo: CTSubscriberInfo, networkInfo: CTTelephonyNetworkInfo, hasInternet: Bool/*String*/, hasConnection: Bool, carrierProxy: Bool) {
         // Initialize stored properties.
         self.name = name
         self.mobile = false

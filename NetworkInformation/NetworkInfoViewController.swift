@@ -24,7 +24,7 @@ class NetworkInfoViewController: UIViewController, AppManagerDelegate {
     var networkSubscriber:CTSubscriber = CTSubscriber()
     var networkSubscriberInfo:CTSubscriberInfo = CTSubscriberInfo()
     var networkInfo:CTTelephonyNetworkInfo = CTTelephonyNetworkInfo()
-    var hasInternet:String = ""
+    var hasInternet:Bool = false//String = ""
     var hasConnection:Bool = Reachability.isConnectedToNetwork()
     var carrierProxy:Bool = false
 
@@ -69,9 +69,9 @@ class NetworkInfoViewController: UIViewController, AppManagerDelegate {
 
 //        var hasInternet = false
         if (AppManager.sharedInstance.isReachability) {
-            hasInternet += "true" //Reachability.currentReachabilityStatus() //(self.Reachability) //ConnectedToNetwork()
+            hasInternet = true //Reachability.currentReachabilityStatus() //(self.Reachability) //ConnectedToNetwork()
         } else {
-            hasInternet += "false"
+            hasInternet = false
         }
 
         // Checking for Connection Type
