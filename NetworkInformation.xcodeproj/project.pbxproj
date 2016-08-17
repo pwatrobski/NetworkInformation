@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAE8E9BA1D49109E0029E942 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE8E9B91D49109E0029E942 /* Reachability.m */; };
 		DAEE22771D40746600D8AF63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE22761D40746600D8AF63 /* AppDelegate.swift */; };
 		DAEE22791D40746600D8AF63 /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE22781D40746600D8AF63 /* DisclaimerViewController.swift */; };
 		DAEE227C1D40746600D8AF63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAEE227A1D40746600D8AF63 /* Main.storyboard */; };
@@ -16,8 +17,6 @@
 		DAEE22971D41030D00D8AF63 /* NetworkInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE22961D41030D00D8AF63 /* NetworkInfoViewController.swift */; };
 		DAEE22991D41297300D8AF63 /* NetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE22981D41297300D8AF63 /* NetInfo.swift */; };
 		DAEE229A1D41297300D8AF63 /* NetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE22981D41297300D8AF63 /* NetInfo.swift */; };
-		DAEE229C1D466D5700D8AF63 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE229B1D466D5700D8AF63 /* Reachability.swift */; };
-		DAEE229E1D467BB400D8AF63 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE229D1D467BB400D8AF63 /* AppManager.swift */; };
 		DAEE22A01D47AB9100D8AF63 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE229F1D47AB9100D8AF63 /* Protocols.swift */; };
 		DAEE22A41D47AF3D00D8AF63 /* AppReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEE22A31D47AF3D00D8AF63 /* AppReference.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DAE8E9B71D49109E0029E942 /* NetworkInformation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NetworkInformation-Bridging-Header.h"; sourceTree = "<group>"; };
+		DAE8E9B81D49109E0029E942 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		DAE8E9B91D49109E0029E942 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		DAEE22731D40746600D8AF63 /* NetworkInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEE22761D40746600D8AF63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAEE22781D40746600D8AF63 /* DisclaimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerViewController.swift; sourceTree = "<group>"; };
@@ -45,8 +47,6 @@
 		DAEE228D1D40746600D8AF63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAEE22961D41030D00D8AF63 /* NetworkInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkInfoViewController.swift; sourceTree = "<group>"; };
 		DAEE22981D41297300D8AF63 /* NetInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetInfo.swift; sourceTree = "<group>"; };
-		DAEE229B1D466D5700D8AF63 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		DAEE229D1D467BB400D8AF63 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		DAEE229F1D47AB9100D8AF63 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		DAEE22A31D47AF3D00D8AF63 /* AppReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +69,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DAE8E9B61D490C000029E942 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DAE8E9B81D49109E0029E942 /* Reachability.h */,
+				DAE8E9B91D49109E0029E942 /* Reachability.m */,
+				DAE8E9B71D49109E0029E942 /* NetworkInformation-Bridging-Header.h */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		DAEE226A1D40746600D8AF63 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +109,8 @@
 				DAEE227D1D40746600D8AF63 /* Assets.xcassets */,
 				DAEE227F1D40746600D8AF63 /* LaunchScreen.storyboard */,
 				DAEE22821D40746600D8AF63 /* Info.plist */,
-				DAEE229B1D466D5700D8AF63 /* Reachability.swift */,
-				DAEE229D1D467BB400D8AF63 /* AppManager.swift */,
 				DAEE229F1D47AB9100D8AF63 /* Protocols.swift */,
+				DAE8E9B61D490C000029E942 /* SupportingFiles */,
 			);
 			path = NetworkInformation;
 			sourceTree = "<group>";
@@ -221,9 +230,8 @@
 				DAEE22791D40746600D8AF63 /* DisclaimerViewController.swift in Sources */,
 				DAEE22A01D47AB9100D8AF63 /* Protocols.swift in Sources */,
 				DAEE22771D40746600D8AF63 /* AppDelegate.swift in Sources */,
-				DAEE229E1D467BB400D8AF63 /* AppManager.swift in Sources */,
 				DAEE22A41D47AF3D00D8AF63 /* AppReference.swift in Sources */,
-				DAEE229C1D466D5700D8AF63 /* Reachability.swift in Sources */,
+				DAE8E9BA1D49109E0029E942 /* Reachability.m in Sources */,
 				DAEE22991D41297300D8AF63 /* NetInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NetworkInformation/Info.plist;
@@ -363,6 +372,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nist.csd.NetworkInformation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NetworkInformation/NetworkInformation-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -370,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NetworkInformation/Info.plist;
@@ -377,6 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nist.csd.NetworkInformation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NetworkInformation/NetworkInformation-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -423,6 +436,7 @@
 				DAEE22921D40746600D8AF63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAEE22931D40746600D8AF63 /* Build configuration list for PBXNativeTarget "NetworkInformationTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +445,7 @@
 				DAEE22951D40746600D8AF63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
